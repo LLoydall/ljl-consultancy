@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-retro-dark: #0f1115;
+	--color-retro-panel: #1a1c23;
+	--color-retro-amber: #ff9d00;
+	--color-retro-cyan: #00f3ff;
+	--color-glass-base: rgba(255, 255, 255, 0.03);
+	--color-glass-border: rgba(255, 255, 255, 0.1);
+	--color-glass-highlight: rgba(255, 255, 255, 0.05);
+
+	--shadow-neon-amber: 0 0 10px rgba(255, 157, 0, 0.3), 0 0 20px rgba(255, 157, 0, 0.2);
+	--shadow-neon-cyan: 0 0 10px rgba(0, 243, 255, 0.3), 0 0 20px rgba(0, 243, 255, 0.2);
+	--shadow-hardware-inset:
+		inset 0 2px 4px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(255, 255, 255, 0.1);
+}

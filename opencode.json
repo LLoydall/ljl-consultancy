@@ -21,7 +21,7 @@
 				"list": "allow",
 				"bash": "allow",
 				"task": "allow",
-				"external_directory": "deny",
+				"external_directory": "allow",
 				"lsp": "allow",
 				"skill": "allow",
 				"todowrite": "allow",
