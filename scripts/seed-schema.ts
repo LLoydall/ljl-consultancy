@@ -38,10 +38,41 @@ async function seedData() {
 		const seedDataContent = readFileSync(seedDataPath, 'utf-8');
 		const seedData = JSON.parse(seedDataContent);
 
+		// Recursively scan and replace {file:path} tokens
+		function replaceFileTokens(obj: any): any {
+			if (typeof obj === 'string') {
+				const fileMatch = obj.match(/^{file:(.*?)}$/);
+				if (fileMatch) {
+					const filePath = resolve(__dirname, '..', fileMatch[1]);
+					console.log(`   Reading file: ${fileMatch[1]}`);
+					try {
+						return readFileSync(filePath, 'utf-8');
+					} catch (err) {
+						console.error(`   ❌ Failed to read file ${filePath}:`, err);
+						return obj;
+					}
+				}
+				return obj;
+			}
+			if (Array.isArray(obj)) {
+				return obj.map(replaceFileTokens);
+			}
+			if (obj !== null && typeof obj === 'object') {
+				const newObj: any = {};
+				for (const key in obj) {
+					newObj[key] = replaceFileTokens(obj[key]);
+				}
+				return newObj;
+			}
+			return obj;
+		}
+
+		const processedSeedData = replaceFileTokens(seedData);
+
 		// Seed System Status
-		if (seedData.system_status) {
+		if (processedSeedData.system_status) {
 			console.log('⏳ Seeding system_status (singleton)...');
-			await client.request(updateSingleton('system_status', seedData.system_status));
+			await client.request(updateSingleton('system_status', processedSeedData.system_status));
 			console.log('✅ system_status seeded successfully.');
 		}
 
@@ -49,7 +80,7 @@ async function seedData() {
 		const collectionsToSeed = ['projects', 'experience'];
 
 		for (const collection of collectionsToSeed) {
-			if (seedData[collection] && Array.isArray(seedData[collection])) {
+			if (processedSeedData[collection] && Array.isArray(processedSeedData[collection])) {
 				console.log(`⏳ Seeding ${collection}...`);
 
 				// 1. Fetch existing items to delete them and start fresh
@@ -61,12 +92,12 @@ async function seedData() {
 					console.log(
 						`   Found ${existingItems.length} existing items in ${collection}. Deleting...`
 					);
-					const idsToDelete = existingItems.map((item: { id: string | number }) => item.id);
-					await client.request(deleteItems(collection, idsToDelete));
+					const idsToDelete = existingItems.map((item: any) => item.id);
+					await client.request(deleteItems(collection, idsToDelete as any));
 				}
 
 				// 2. Insert new items
-				const newItems = seedData[collection];
+				const newItems = processedSeedData[collection];
 				if (newItems.length > 0) {
 					console.log(`   Inserting ${newItems.length} new items into ${collection}...`);
 					await client.request(createItems(collection, newItems));

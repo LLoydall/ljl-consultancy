@@ -6,32 +6,41 @@
 	"projects": [
 		{
 			"title": "HEAL Security Platform",
-			"type": "THREAT INTELLIGENCE UI",
+			"slug": "heal-security",
+			"content": "{file:misc/heal-security-copy.md}",
+			"type": "THREAT INTELLIGENCE PLATFORM",
 			"status": "ONLINE",
-			"description": "Zero hand-off DevOps environment and complete SDLC ownership for a healthcare cybersecurity threat intelligence startup. Engineered v1 platform from the ground up.",
+			"description": "Engineered v1 platform from the ground up. Architected the core React/TypeScript monorepo, optimized 3D WebGL data visualizations (60FPS), and built a Go/Node.js hybrid SSR microservice. Overhauled Python JSON enrichment pipelines with aggressive memory algorithms. Developed scalable LLM AI Agent microservices (Express/Kubernetes) seamlessly integrated into the UI. Managed robust CI/CD and GCP infrastructure via Terraform and FluxCD.",
 			"technologies": [
 				"TypeScript",
 				"React",
 				"Redux",
-				"Tailwind",
+				"WebGL",
 				"Vite",
 				"GraphQL",
-				"NodeJS",
+				"Node.js",
+				"Go",
+				"Python",
 				"Postgres",
 				"GCP",
 				"Docker",
-				"Kubernetes"
+				"Kubernetes",
+				"FluxCD",
+				"Terraform"
 			],
 			"glow_color": "cyan",
 			"logs": [
-				"> INITIALIZING THREAT MATRICES...",
-				"> DEPLOYING KUBERNETES CLUSTER...",
+				"> INITIALIZING 3D WEBGL GLOBE...",
+				"> OPTIMIZING PYTHON ENRICHMENT PIPELINE (MEMORY SAVED)...",
+				"> DEPLOYING GO/NODE.JS SSR MICROSERVICE...",
+				"> AI AGENT SESSION ESTABLISHED (K8S)...",
 				"> V1 PLATFORM COMPILED AND ONLINE."
 			],
 			"action_text": "VIEW SPECS"
 		},
 		{
 			"title": "Toca Social Scheduling Engine",
+			"slug": "toca-social",
 			"type": "INTERACTIVE SYSTEM ARCHITECTURE",
 			"status": "SYSTEM OPTIMAL",
 			"description": "Architected and delivered the scheduling system front end for an interactive football penalty shootout game. Integrated website booking journeys and reception desk modules.",
@@ -46,6 +55,7 @@
 		},
 		{
 			"title": "Margin Trading Simulator",
+			"slug": "margin-trading-simulator",
 			"type": "DATA VISUALIZATION",
 			"status": "ARCHIVED",
 			"description": "Built an interactive module simulating margin trading mechanics for beginners. Featured prominently on the TradeNation platform homepage with high-fidelity physics and animations.",
@@ -60,6 +70,7 @@
 		},
 		{
 			"title": "E-Commerce Component Library",
+			"slug": "e-commerce-component-library",
 			"type": "UI ARCHITECTURE",
 			"status": "ARCHIVED",
 			"description": "Developed generic, high-performance React component libraries and e-commerce checkout journeys consumed by diverse client frontends in a fast-paced Scrum environment.",
@@ -74,6 +85,7 @@
 		},
 		{
 			"title": "Commercial On-boarding Portal",
+			"slug": "commercial-onboarding-portal",
 			"type": "ENTERPRISE INFRASTRUCTURE",
 			"status": "ARCHIVED",
 			"description": "Engineered scalable front-end components and a Node.js database adapter for document upload and origination portals within the Commercial On-boarding lab.",
@@ -88,6 +100,7 @@
 		},
 		{
 			"title": "SERN Stack FM Gateway",
+			"slug": "sern-stack-fm-gateway",
 			"type": "SYSTEM ARCHITECTURE",
 			"status": "ARCHIVED",
 			"description": "Built a robust gateway system allowing clients to log, track, and monitor expenditure on facilities management jobs. Deployed iterative updates to the engineer's mobile app.",
@@ -104,10 +117,21 @@
 	"experience": [
 		{
 			"company": "Heal Security Inc",
-			"role": "Lead Front-end Developer",
+			"role": "Lead Full-Stack / Staff Engineer",
 			"period": "May 2023 - Present",
-			"description": "Led the front-end development for a healthcare cybersecurity threat intelligence platform (HEAL Security Desktop and Vitals) from inception to v1. Established a zero hand-off devops environment.",
-			"technologies": ["TypeScript", "React", "Redux", "GCP", "Kubernetes", "Docker", "NodeJS"],
+			"description": "Architected the v1 Threat Intelligence platform from inception. Scaled the React/TypeScript monorepo and pushed WebGL performance limits. Engineered Go/Node.js hybrid SSR servers, overhauled memory-heavy Python data pipelines, and built stateful LLM AI agent microservices in Kubernetes. Managed infrastructure using GCP, Terraform, and FluxCD.",
+			"technologies": [
+				"TypeScript",
+				"React",
+				"Redux",
+				"Go",
+				"Python",
+				"GCP",
+				"Kubernetes",
+				"FluxCD",
+				"Terraform",
+				"Node.js"
+			],
 			"status": "ACTIVE"
 		},
 		{

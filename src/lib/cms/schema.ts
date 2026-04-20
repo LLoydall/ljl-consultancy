@@ -7,6 +7,8 @@ export interface SystemStatus {
 export interface Project {
 	id: string; // UUID
 	title: string;
+	slug: string;
+	content: string;
 	type: string;
 	status: 'ONLINE' | 'ARCHIVED' | 'SYSTEM OPTIMAL' | string;
 	description: string;

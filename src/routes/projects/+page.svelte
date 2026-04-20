@@ -64,15 +64,16 @@
 							{/each}
 						</div>
 
-						<button
+						<a
+							href="/projects/{project.slug}"
 							class="
-                w-full border border-glass-border bg-glass-highlight py-2 font-mono text-sm tracking-wider text-white uppercase
+                block w-full border border-glass-border bg-glass-highlight py-2 text-center font-mono text-sm tracking-wider text-white uppercase
                 transition-colors duration-200 hover:bg-white/10
                 active:translate-y-[1px]
               "
 						>
 							View Log
-						</button>
+						</a>
 					</div>
 				</div>
 			</DiffusedGlassPanel>

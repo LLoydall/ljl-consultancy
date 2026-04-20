@@ -27,6 +27,8 @@
 			},
 			{ "field": "sort", "type": "integer", "meta": { "hidden": true } },
 			{ "field": "title", "type": "string", "meta": { "interface": "input" } },
+			{ "field": "slug", "type": "string", "meta": { "interface": "input" } },
+			{ "field": "content", "type": "text", "meta": { "interface": "input-rich-text-md" } },
 			{ "field": "type", "type": "string", "meta": { "interface": "input" } },
 			{
 				"field": "status",

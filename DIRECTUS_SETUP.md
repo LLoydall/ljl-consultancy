@@ -43,6 +43,8 @@ This collection holds your engineering and consultancy projects.
 | Field Key      | Type in Directus        | Interface / Notes                                   |
 | :------------- | :---------------------- | :-------------------------------------------------- |
 | `title`        | String (Input)          | e.g. "Quantum Web Architecture"                     |
+| `slug`         | String (Input)          | e.g. "quantum-web-architecture"                     |
+| `content`      | Text (Markdown)         | Detailed markdown content                           |
 | `type`         | String (Input)          | e.g. "SYSTEM ARCHITECTURE"                          |
 | `status`       | String (Dropdown)       | Choices: `ONLINE`, `ARCHIVED`, `SYSTEM OPTIMAL`     |
 | `description`  | Text (Textarea)         | Short descriptive text                              |

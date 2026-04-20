@@ -9,6 +9,7 @@ export const load: PageServerLoad = async () => {
 		return {
 			projects: projectItems.map((item) => ({
 				id: item.id,
+				slug: item.slug,
 				title: item.title,
 				type: item.type,
 				status: item.status,
