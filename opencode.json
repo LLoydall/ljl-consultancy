@@ -1,42 +1,67 @@
 {
-  "$schema": "https://opencode.ai/config.json",
-  "model": "google/gemini-3.1-pro-preview",
-  "provider": {
-    "google": {
-      "options": {
-        "timeout": 1200000
-      }
-    }
-  },
-  "agent": {
-    "developer": {
-      "description": "Developer agent for sveltekit project.",
-      "mode": "subagent",
-      "prompt": "{file:.opencode/prompts/site-developer.md}",
-      "permission": {
-        "read": "allow",
-        "edit": "allow",
-        "glob": "allow",
-        "grep": "allow",
-        "list": "allow",
-        "bash": "allow",
-        "task": "allow",
-        "external_directory": "deny",
-        "lsp": "allow",
-        "skill": "allow",
-        "todowrite": "allow",
-        "question": "allow",
-        "webfetch": "allow",
-        "websearch": "allow",
-        "codesearch": "allow"
-      },
-      "model": "google/gemini-3.1-pro-preview",
-      "steps": 600,
-      "variant": "max"
-    }
-  },
-  "experimental": {
-    "mcp_timeout": 1200000,
-    "continue_loop_on_deny": true
-  }
+	"$schema": "https://opencode.ai/config.json",
+	"model": "google/gemini-3.1-pro-preview",
+	"provider": {
+		"google": {
+			"options": {
+				"timeout": 1200000
+			}
+		}
+	},
+	"agent": {
+		"developer": {
+			"description": "Developer agent for sveltekit project.",
+			"mode": "subagent",
+			"prompt": "{file:.opencode/prompts/site-developer.md}",
+			"permission": {
+				"read": "allow",
+				"edit": "allow",
+				"glob": "allow",
+				"grep": "allow",
+				"list": "allow",
+				"bash": "allow",
+				"task": "allow",
+				"external_directory": "deny",
+				"lsp": "allow",
+				"skill": "allow",
+				"todowrite": "allow",
+				"question": "allow",
+				"webfetch": "allow",
+				"websearch": "allow",
+				"codesearch": "allow"
+			},
+			"model": "google/gemini-3.1-pro-preview",
+			"steps": 600,
+			"variant": "max"
+		},
+		"content_writer": {
+			"description": "Content writer agent for Directus CMS.",
+			"mode": "subagent",
+			"prompt": "{file:.opencode/prompts/content-writer.md}",
+			"permission": {
+				"read": "allow",
+				"edit": "allow",
+				"glob": "allow",
+				"grep": "allow",
+				"list": "allow",
+				"bash": "allow",
+				"task": "allow",
+				"external_directory": "allow",
+				"lsp": "allow",
+				"skill": "allow",
+				"todowrite": "allow",
+				"question": "allow",
+				"webfetch": "allow",
+				"websearch": "allow",
+				"codesearch": "allow"
+			},
+			"model": "google/gemini-3.1-pro-preview",
+			"steps": 600,
+			"variant": "max"
+		}
+	},
+	"experimental": {
+		"mcp_timeout": 1200000,
+		"continue_loop_on_deny": true
+	}
 }

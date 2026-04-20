@@ -5,6 +5,7 @@ This guide walks you through deploying your LJL Consultancy portfolio (SvelteKit
 ## Overview
 
 You will create **one Railway Project** containing multiple services:
+
 1.  **PostgreSQL** (Database for Directus)
 2.  **Redis** (Cache for Directus - Optional but recommended)
 3.  **Directus** (Backend CMS)
@@ -22,7 +23,7 @@ You will create **one Railway Project** containing multiple services:
 6. Go to the **Settings** tab.
 7. Scroll down to **Networking** and click **Generate Domain**.
 8. **Save this URL** (e.g., `https://directus-production-xxxx.up.railway.app`). This is your `VITE_DIRECTUS_URL`.
-9. *Visit your new Directus URL, set up your admin account, and configure the Schema according to the `DIRECTUS_SETUP.md` guide.*
+9. _Visit your new Directus URL, set up your admin account, and configure the Schema according to the `DIRECTUS_SETUP.md` guide._
 
 ---
 
@@ -34,7 +35,7 @@ You will create **one Railway Project** containing multiple services:
 4. Railway will automatically detect the `railway.toml` file in the root of the repo, which specifies:
    - Build Command: `npm run build`
    - Start Command: `node build`
-5. **DO NOT let the build finish yet!** It will fail without the environment variable. 
+5. **DO NOT let the build finish yet!** It will fail without the environment variable.
 6. Click on your newly created SvelteKit service.
 7. Go to the **Variables** tab and add a new variable:
    - **VARIABLE NAME:** `VITE_DIRECTUS_URL`

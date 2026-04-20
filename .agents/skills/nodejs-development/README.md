@@ -111,14 +111,14 @@ touch index.js
 const http = require('http');
 
 const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
+	res.statusCode = 200;
+	res.setHeader('Content-Type', 'text/plain');
+	res.end('Hello World\n');
 });
 
 const PORT = 3000;
 server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
+	console.log(`Server running at http://localhost:${PORT}/`);
 });
 ```
 
@@ -138,11 +138,11 @@ const app = express();
 const PORT = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+	res.send('Hello World!');
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+	console.log(`Server running on port ${PORT}`);
 });
 ```
 
@@ -170,8 +170,8 @@ console.log(data);
 
 // Non-blocking (asynchronous)
 fs.readFile('file.txt', (err, data) => {
-  if (err) throw err;
-  console.log(data);
+	if (err) throw err;
+	console.log(data);
 });
 console.log('This executes immediately');
 ```
@@ -240,12 +240,12 @@ const app = express();
 app.use(express.json());
 
 app.get('/api/users', (req, res) => {
-  res.json({ users: [] });
+	res.json({ users: [] });
 });
 
 app.post('/api/users', (req, res) => {
-  const user = req.body;
-  res.status(201).json(user);
+	const user = req.body;
+	res.status(201).json(user);
 });
 
 app.listen(3000);
@@ -260,14 +260,14 @@ const WebSocket = require('ws');
 const wss = new WebSocket.Server({ port: 8080 });
 
 wss.on('connection', (ws) => {
-  ws.on('message', (message) => {
-    // Broadcast to all clients
-    wss.clients.forEach((client) => {
-      if (client.readyState === WebSocket.OPEN) {
-        client.send(message);
-      }
-    });
-  });
+	ws.on('message', (message) => {
+		// Broadcast to all clients
+		wss.clients.forEach((client) => {
+			if (client.readyState === WebSocket.OPEN) {
+				client.send(message);
+			}
+		});
+	});
 });
 ```
 
@@ -282,14 +282,14 @@ const args = process.argv.slice(2);
 const command = args[0];
 
 switch (command) {
-  case 'help':
-    console.log('Available commands: help, version');
-    break;
-  case 'version':
-    console.log('v1.0.0');
-    break;
-  default:
-    console.log('Unknown command');
+	case 'help':
+		console.log('Available commands: help, version');
+		break;
+	case 'version':
+		console.log('v1.0.0');
+		break;
+	default:
+		console.log('Unknown command');
 }
 ```
 
@@ -306,7 +306,7 @@ const writeStream = fs.createWriteStream('output.txt');
 readStream.pipe(writeStream);
 
 writeStream.on('finish', () => {
-  console.log('File processing complete');
+	console.log('File processing complete');
 });
 ```
 
@@ -390,13 +390,13 @@ const dbUrl = process.env.DATABASE_URL;
 
 ```json
 {
-  "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "test": "jest",
-    "lint": "eslint .",
-    "format": "prettier --write ."
-  }
+	"scripts": {
+		"start": "node index.js",
+		"dev": "nodemon index.js",
+		"test": "jest",
+		"lint": "eslint .",
+		"format": "prettier --write ."
+	}
 }
 ```
 
@@ -417,25 +417,25 @@ Always handle errors properly:
 ```javascript
 // Async/await
 try {
-  const data = await fetchData();
+	const data = await fetchData();
 } catch (err) {
-  console.error('Error:', err);
+	console.error('Error:', err);
 }
 
 // Promises
 fetchData()
-  .then((data) => process(data))
-  .catch((err) => console.error('Error:', err));
+	.then((data) => process(data))
+	.catch((err) => console.error('Error:', err));
 
 // Process-level error handling
 process.on('uncaughtException', (err) => {
-  console.error('Uncaught exception:', err);
-  process.exit(1);
+	console.error('Uncaught exception:', err);
+	process.exit(1);
 });
 
 process.on('unhandledRejection', (reason, promise) => {
-  console.error('Unhandled rejection:', reason);
-  process.exit(1);
+	console.error('Unhandled rejection:', reason);
+	process.exit(1);
 });
 ```
 
@@ -489,15 +489,15 @@ Create `.vscode/launch.json`:
 
 ```json
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Launch Program",
-      "program": "${workspaceFolder}/index.js"
-    }
-  ]
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Launch Program",
+			"program": "${workspaceFolder}/index.js"
+		}
+	]
 }
 ```
 
@@ -521,7 +521,7 @@ console.timeEnd('operation');
 ```javascript
 // math.js
 function add(a, b) {
-  return a + b;
+	return a + b;
 }
 module.exports = { add };
 
@@ -529,7 +529,7 @@ module.exports = { add };
 const { add } = require('./math');
 
 test('adds 1 + 2 to equal 3', () => {
-  expect(add(1, 2)).toBe(3);
+	expect(add(1, 2)).toBe(3);
 });
 ```
 
@@ -540,12 +540,12 @@ const request = require('supertest');
 const app = require('./app');
 
 describe('GET /api/users', () => {
-  it('responds with json', async () => {
-    const response = await request(app)
-      .get('/api/users')
-      .expect('Content-Type', /json/)
-      .expect(200);
-  });
+	it('responds with json', async () => {
+		const response = await request(app)
+			.get('/api/users')
+			.expect('Content-Type', /json/)
+			.expect(200);
+	});
 });
 ```
 

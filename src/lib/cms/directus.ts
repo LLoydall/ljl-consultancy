@@ -1,4 +1,4 @@
-import { createDirectus, rest, graphql } from '@directus/sdk';
+import { createDirectus, rest } from '@directus/sdk';
 import type { Schema } from './schema';
 
 // Use an environment variable for the API URL, defaulting to localhost if not provided

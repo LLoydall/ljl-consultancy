@@ -1,0 +1,154 @@
+{
+	"system_status": {
+		"status": "ONLINE",
+		"uptime": "99.99"
+	},
+	"projects": [
+		{
+			"title": "HEAL Security Platform",
+			"type": "THREAT INTELLIGENCE UI",
+			"status": "ONLINE",
+			"description": "Zero hand-off DevOps environment and complete SDLC ownership for a healthcare cybersecurity threat intelligence startup. Engineered v1 platform from the ground up.",
+			"technologies": [
+				"TypeScript",
+				"React",
+				"Redux",
+				"Tailwind",
+				"Vite",
+				"GraphQL",
+				"NodeJS",
+				"Postgres",
+				"GCP",
+				"Docker",
+				"Kubernetes"
+			],
+			"glow_color": "cyan",
+			"logs": [
+				"> INITIALIZING THREAT MATRICES...",
+				"> DEPLOYING KUBERNETES CLUSTER...",
+				"> V1 PLATFORM COMPILED AND ONLINE."
+			],
+			"action_text": "VIEW SPECS"
+		},
+		{
+			"title": "Toca Social Scheduling Engine",
+			"type": "INTERACTIVE SYSTEM ARCHITECTURE",
+			"status": "SYSTEM OPTIMAL",
+			"description": "Architected and delivered the scheduling system front end for an interactive football penalty shootout game. Integrated website booking journeys and reception desk modules.",
+			"technologies": ["TypeScript", "React", "XState", "Redux", "AWS", "Webflow", "Storyblok"],
+			"glow_color": "amber",
+			"logs": [
+				"> BOOTING SCHEDULING ALGORITHM...",
+				"> STATE MACHINE (XSTATE) SYNCED...",
+				"> BOOKING JOURNEYS OPTIMIZED."
+			],
+			"action_text": "ANALYZE LOGS"
+		},
+		{
+			"title": "Margin Trading Simulator",
+			"type": "DATA VISUALIZATION",
+			"status": "ARCHIVED",
+			"description": "Built an interactive module simulating margin trading mechanics for beginners. Featured prominently on the TradeNation platform homepage with high-fidelity physics and animations.",
+			"technologies": ["Framer-motion", "React", "Redux", "CSS modules", "Jest"],
+			"glow_color": "amber",
+			"logs": [
+				"> ALLOCATING MARGIN...",
+				"> INITIATING FRAMER-MOTION VECTORS...",
+				"> SIMULATION COMPLETE."
+			],
+			"action_text": "RUN SIMULATION"
+		},
+		{
+			"title": "E-Commerce Component Library",
+			"type": "UI ARCHITECTURE",
+			"status": "ARCHIVED",
+			"description": "Developed generic, high-performance React component libraries and e-commerce checkout journeys consumed by diverse client frontends in a fast-paced Scrum environment.",
+			"technologies": ["React", "Next.js", "Redux", "Sass", "Jest"],
+			"glow_color": "none",
+			"logs": [
+				"> COMPILING COMPONENT LIBRARY...",
+				"> INJECTING CHECKOUT LOGIC...",
+				"> DEPLOYMENT SUCCESSFUL."
+			],
+			"action_text": "VIEW ARCHIVE"
+		},
+		{
+			"title": "Commercial On-boarding Portal",
+			"type": "ENTERPRISE INFRASTRUCTURE",
+			"status": "ARCHIVED",
+			"description": "Engineered scalable front-end components and a Node.js database adapter for document upload and origination portals within the Commercial On-boarding lab.",
+			"technologies": ["React", "Redux-saga", "NodeJS", "Express", "GraphQL", "Webpack"],
+			"glow_color": "none",
+			"logs": [
+				"> ESTABLISHING SECURE BANKING PROTOCOLS...",
+				"> MOUNTING GRAPHQL ENDPOINTS...",
+				"> INFRASTRUCTURE STABILIZED."
+			],
+			"action_text": "ACCESS ARCHIVE"
+		},
+		{
+			"title": "SERN Stack FM Gateway",
+			"type": "SYSTEM ARCHITECTURE",
+			"status": "ARCHIVED",
+			"description": "Built a robust gateway system allowing clients to log, track, and monitor expenditure on facilities management jobs. Deployed iterative updates to the engineer's mobile app.",
+			"technologies": ["NodeJS", "Express", "SQL Server", "React", "MongoDB", "NGINX", "Cordova"],
+			"glow_color": "none",
+			"logs": [
+				"> INITIALIZING SERN STACK...",
+				"> BOOTING FACILITIES MANAGEMENT GATEWAY...",
+				"> MOBILE DEPLOYMENT TRIGGERED."
+			],
+			"action_text": "READ LOGS"
+		}
+	],
+	"experience": [
+		{
+			"company": "Heal Security Inc",
+			"role": "Lead Front-end Developer",
+			"period": "May 2023 - Present",
+			"description": "Led the front-end development for a healthcare cybersecurity threat intelligence platform (HEAL Security Desktop and Vitals) from inception to v1. Established a zero hand-off devops environment.",
+			"technologies": ["TypeScript", "React", "Redux", "GCP", "Kubernetes", "Docker", "NodeJS"],
+			"status": "ACTIVE"
+		},
+		{
+			"company": "Toca Social",
+			"role": "Front-end Developer",
+			"period": "Sep 2021 - Oct 2022",
+			"description": "Led a team to build the front-end scheduling system for an interactive penalty shootout game. Also developed the reception desk system and headless CMS-driven website booking journey.",
+			"technologies": ["TypeScript", "React", "XState", "AWS", "Storyblok"],
+			"status": "ARCHIVED"
+		},
+		{
+			"company": "TradeNation.com",
+			"role": "Front-end Developer",
+			"period": "May 2021 - Aug 2021",
+			"description": "Developed a heavily-animated tool to demonstrate margin trading principles for beginners, prominently featured on the company's homepage.",
+			"technologies": ["Framer-motion", "React", "Redux"],
+			"status": "ARCHIVED"
+		},
+		{
+			"company": "Wunderman Thompson",
+			"role": "Full-stack / Front-end Developer",
+			"period": "Aug 2019 - May 2020",
+			"description": "Developed e-commerce checkout journeys and a generic React component library consumed by various client UIs in an agile setting.",
+			"technologies": ["React", "Next.js", "Redux", "Sass"],
+			"status": "ARCHIVED"
+		},
+		{
+			"company": "Lloyds Banking Group",
+			"role": "Full-stack / Front-end Developer",
+			"period": "Nov 2018 - Aug 2019",
+			"description": "Delivered components for the Commercial On-boarding web front end and Product Origination portal. Created a Node database adapter for document management.",
+			"technologies": ["React", "Redux-saga", "NodeJS", "Express", "GraphQL"],
+			"status": "ARCHIVED"
+		},
+		{
+			"company": "Cloudfm Group",
+			"role": "Senior Full-stack Developer",
+			"period": "Dec 2014 - Nov 2018",
+			"description": "Built a SERN stack gateway for logging/tracking facilities management jobs and expenditure. Delivered iterations of the company engineer's app.",
+			"technologies": ["React", "NodeJS", "SQL Server", "MongoDB", "Cordova"],
+			"status": "ARCHIVED"
+		}
+	]
+}

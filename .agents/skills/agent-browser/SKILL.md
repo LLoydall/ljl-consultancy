@@ -673,9 +673,9 @@ Create `agent-browser.json` in the project root for persistent settings:
 
 ```json
 {
-  "headed": true,
-  "proxy": "http://localhost:8080",
-  "profile": "./browser-data"
+	"headed": true,
+	"proxy": "http://localhost:8080",
+	"profile": "./browser-data"
 }
 ```
 

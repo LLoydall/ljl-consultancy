@@ -1,0 +1,97 @@
+[
+	{
+		"collection": "system_status",
+		"meta": { "singleton": true, "icon": "monitor" },
+		"schema": {},
+		"fields": [
+			{
+				"field": "id",
+				"type": "integer",
+				"schema": { "is_primary_key": true, "has_auto_increment": true },
+				"meta": { "hidden": true }
+			},
+			{ "field": "status", "type": "string", "meta": { "interface": "input" } },
+			{ "field": "uptime", "type": "string", "meta": { "interface": "input" } }
+		]
+	},
+	{
+		"collection": "projects",
+		"meta": { "icon": "rocket", "sort_field": "sort" },
+		"schema": {},
+		"fields": [
+			{
+				"field": "id",
+				"type": "string",
+				"schema": { "is_primary_key": true },
+				"meta": { "hidden": true, "interface": "input" }
+			},
+			{ "field": "sort", "type": "integer", "meta": { "hidden": true } },
+			{ "field": "title", "type": "string", "meta": { "interface": "input" } },
+			{ "field": "type", "type": "string", "meta": { "interface": "input" } },
+			{
+				"field": "status",
+				"type": "string",
+				"meta": {
+					"interface": "select-dropdown",
+					"options": {
+						"choices": [
+							{ "text": "ONLINE", "value": "ONLINE" },
+							{ "text": "ARCHIVED", "value": "ARCHIVED" },
+							{ "text": "SYSTEM OPTIMAL", "value": "SYSTEM OPTIMAL" }
+						]
+					}
+				}
+			},
+			{ "field": "description", "type": "text", "meta": { "interface": "textarea" } },
+			{ "field": "technologies", "type": "json", "meta": { "interface": "tags" } },
+			{
+				"field": "glow_color",
+				"type": "string",
+				"meta": {
+					"interface": "select-dropdown",
+					"options": {
+						"choices": [
+							{ "text": "Amber", "value": "amber" },
+							{ "text": "Cyan", "value": "cyan" },
+							{ "text": "None", "value": "none" }
+						]
+					}
+				}
+			},
+			{ "field": "logs", "type": "json", "meta": { "interface": "tags" } },
+			{ "field": "action_text", "type": "string", "meta": { "interface": "input" } }
+		]
+	},
+	{
+		"collection": "experience",
+		"meta": { "icon": "briefcase", "sort_field": "sort" },
+		"schema": {},
+		"fields": [
+			{
+				"field": "id",
+				"type": "string",
+				"schema": { "is_primary_key": true },
+				"meta": { "hidden": true, "interface": "input" }
+			},
+			{ "field": "sort", "type": "integer", "meta": { "hidden": true } },
+			{ "field": "company", "type": "string", "meta": { "interface": "input" } },
+			{ "field": "role", "type": "string", "meta": { "interface": "input" } },
+			{ "field": "period", "type": "string", "meta": { "interface": "input" } },
+			{ "field": "description", "type": "text", "meta": { "interface": "textarea" } },
+			{ "field": "technologies", "type": "json", "meta": { "interface": "tags" } },
+			{
+				"field": "status",
+				"type": "string",
+				"meta": {
+					"interface": "select-dropdown",
+					"options": {
+						"choices": [
+							{ "text": "ACTIVE", "value": "ACTIVE" },
+							{ "text": "ARCHIVED", "value": "ARCHIVED" }
+						]
+					}
+				}
+			}
+		]
+	}
+]

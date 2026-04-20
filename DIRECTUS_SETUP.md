@@ -17,57 +17,60 @@ You need to create three specific collections in Directus. For each collection, 
 ### Collection 1: `system_status`
 
 This collection handles the global status dashboard items.
-*   **Type:** Singleton
-*   **Collection Name:** `system_status`
+
+- **Type:** Singleton
+- **Collection Name:** `system_status`
 
 **Fields to Create:**
 
-| Field Key | Type in Directus | Interface / Notes |
-| :--- | :--- | :--- |
-| `status` | String (Input) | e.g. "ONLINE" or "DEGRADED" |
-| `uptime` | String (Input) | e.g. "99.9" |
+| Field Key | Type in Directus | Interface / Notes           |
+| :-------- | :--------------- | :-------------------------- |
+| `status`  | String (Input)   | e.g. "ONLINE" or "DEGRADED" |
+| `uptime`  | String (Input)   | e.g. "99.9"                 |
 
 ---
 
 ### Collection 2: `projects`
 
 This collection holds your engineering and consultancy projects.
-*   **Type:** Collection (Multiple Items)
-*   **Collection Name:** `projects`
-*   *(Optional)* Enable "Sort" in the collection setup to allow manual drag-and-drop reordering.
+
+- **Type:** Collection (Multiple Items)
+- **Collection Name:** `projects`
+- _(Optional)_ Enable "Sort" in the collection setup to allow manual drag-and-drop reordering.
 
 **Fields to Create:**
 
-| Field Key | Type in Directus | Interface / Notes |
-| :--- | :--- | :--- |
-| `title` | String (Input) | e.g. "Quantum Web Architecture" |
-| `type` | String (Input) | e.g. "SYSTEM ARCHITECTURE" |
-| `status` | String (Dropdown) | Choices: `ONLINE`, `ARCHIVED`, `SYSTEM OPTIMAL` |
-| `description` | Text (Textarea) | Short descriptive text |
+| Field Key      | Type in Directus        | Interface / Notes                                   |
+| :------------- | :---------------------- | :-------------------------------------------------- |
+| `title`        | String (Input)          | e.g. "Quantum Web Architecture"                     |
+| `type`         | String (Input)          | e.g. "SYSTEM ARCHITECTURE"                          |
+| `status`       | String (Dropdown)       | Choices: `ONLINE`, `ARCHIVED`, `SYSTEM OPTIMAL`     |
+| `description`  | Text (Textarea)         | Short descriptive text                              |
 | `technologies` | JSON (Tags or Repeater) | Array of strings (e.g. `["SvelteKit", "Tailwind"]`) |
-| `glow_color` | String (Dropdown) | Choices: `amber`, `cyan`, `none` |
-| `logs` | JSON (Tags or Repeater) | Array of terminal strings (e.g. `["> INIT..."]`) |
-| `action_text` | String (Input) | Button text (e.g. "View Specs") |
+| `glow_color`   | String (Dropdown)       | Choices: `amber`, `cyan`, `none`                    |
+| `logs`         | JSON (Tags or Repeater) | Array of terminal strings (e.g. `["> INIT..."]`)    |
+| `action_text`  | String (Input)          | Button text (e.g. "View Specs")                     |
 
 ---
 
 ### Collection 3: `experience`
 
 This collection holds your professional roles and timelines.
-*   **Type:** Collection (Multiple Items)
-*   **Collection Name:** `experience`
-*   *(Optional)* Enable "Sort" in the collection setup to allow manual drag-and-drop reordering.
+
+- **Type:** Collection (Multiple Items)
+- **Collection Name:** `experience`
+- _(Optional)_ Enable "Sort" in the collection setup to allow manual drag-and-drop reordering.
 
 **Fields to Create:**
 
-| Field Key | Type in Directus | Interface / Notes |
-| :--- | :--- | :--- |
-| `company` | String (Input) | e.g. "Lloyds Banking Group" |
-| `role` | String (Input) | e.g. "Software Engineer" |
-| `period` | String (Input) | e.g. "2021 - Present" |
-| `description` | Text (Textarea) | Description of responsibilities |
+| Field Key      | Type in Directus        | Interface / Notes                                 |
+| :------------- | :---------------------- | :------------------------------------------------ |
+| `company`      | String (Input)          | e.g. "Lloyds Banking Group"                       |
+| `role`         | String (Input)          | e.g. "Software Engineer"                          |
+| `period`       | String (Input)          | e.g. "2021 - Present"                             |
+| `description`  | Text (Textarea)         | Description of responsibilities                   |
 | `technologies` | JSON (Tags or Repeater) | Array of strings (e.g. `["React", "TypeScript"]`) |
-| `status` | String (Dropdown) | Choices: `ACTIVE`, `ARCHIVED` |
+| `status`       | String (Dropdown)       | Choices: `ACTIVE`, `ARCHIVED`                     |
 
 ---
 
