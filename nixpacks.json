@@ -1,0 +1,14 @@
+{
+	"providers": ["node"],
+	"phases": {
+		"setup": {
+			"nixPkgs": ["nodejs_22"]
+		},
+		"install": {
+			"cmds": ["npm ci --include=optional"]
+		},
+		"build": {
+			"cmds": ["npm run build"]
+		}
+	}
+}

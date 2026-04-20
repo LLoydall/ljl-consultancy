@@ -32,7 +32,7 @@ You will create **one Railway Project** containing multiple services:
 1. Ensure your current frontend codebase is pushed to a GitHub repository.
 2. In the **same Railway project** canvas where your Directus instance lives, click **New** -> **GitHub Repo**.
 3. Select the repository containing your SvelteKit code.
-4. Railway will automatically detect the `railway.toml` file in the root of the repo, which specifies:
+4. Railway will automatically detect the `railway.json` and `nixpacks.json` files in the root of the repo, which specifies:
    - Build Command: `npm run build`
    - Start Command: `node build`
 5. **DO NOT let the build finish yet!** It will fail without the environment variable.
