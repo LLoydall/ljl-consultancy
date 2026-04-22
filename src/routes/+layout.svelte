@@ -16,8 +16,7 @@
 			</div>
 
 			<div class="layout__nav-items">
-				<HardwareNavButton href="/" label="Dashboard" />
-				<HardwareNavButton href="/experience" label="Experience" />
+				<HardwareNavButton href="/" label="Experience" />
 				<HardwareNavButton href="/projects" label="Projects" activeColor="cyan" />
 			</div>
 		</div>

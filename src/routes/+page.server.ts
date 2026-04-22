@@ -4,8 +4,12 @@ import { readSingleton, readItems } from '@directus/sdk';
 
 export const load: PageServerLoad = async () => {
 	try {
-		const systemStatus = await directus.request(readSingleton('system_status'));
-		const projects = await directus.request(readItems('projects', { limit: 1, sort: ['sort'] }));
+		const [systemStatus, projects, experienceItems] = await Promise.all([
+			directus.request(readSingleton('system_status')),
+			directus.request(readItems('projects', { limit: 1, sort: ['sort'] })),
+			directus.request(readItems('experience', { sort: ['sort'] }))
+		]);
+
 		const latestProject = projects[0];
 
 		return {
@@ -25,7 +29,19 @@ export const load: PageServerLoad = async () => {
 						status: 'OFFLINE',
 						logs: ['> WAITING FOR DATA...'],
 						actionText: 'STANDBY'
-					}
+					},
+			experience: {
+				title: 'Professional Experience',
+				roles: experienceItems.map((item) => ({
+					id: item.id,
+					company: item.company,
+					role: item.role,
+					period: item.period,
+					description: item.description,
+					technologies: item.technologies || [],
+					status: item.status
+				}))
+			}
 		};
 	} catch (e) {
 		console.error('Error fetching CMS data:', e);
@@ -36,6 +52,10 @@ export const load: PageServerLoad = async () => {
 				status: 'OFFLINE',
 				logs: ['> CMS CONNECTION FAILED...'],
 				actionText: 'RETRY'
+			},
+			experience: {
+				title: 'Professional Experience',
+				roles: []
 			}
 		};
 	}
